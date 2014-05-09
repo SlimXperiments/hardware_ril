@@ -24,8 +24,6 @@ endif
 
 LOCAL_MODULE:= libril
 
-LOCAL_LDLIBS += -lpthread
-
 ifeq ($(BOARD_USES_LEGACY_RIL),true)
 LOCAL_CFLAGS += -DLEGACY_RIL
 endif
@@ -49,8 +47,6 @@ LOCAL_STATIC_LIBRARIES := \
 LOCAL_CFLAGS :=
 
 LOCAL_MODULE:= libril_static
-
-LOCAL_LDLIBS += -lpthread
 
 include $(BUILD_STATIC_LIBRARY)
 endif # ANDROID_BIONIC_TRANSITION
